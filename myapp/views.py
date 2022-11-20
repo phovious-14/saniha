@@ -4,7 +4,6 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse, JsonResponse
 from .models import Message
-from Convai import chate
 from bot import ask
 # Create your views here.
 
