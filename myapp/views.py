@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponse, JsonResponse
 from .models import Message
 from Convai import chate
+from bot import ask
 # Create your views here.
 
 def index(request):
@@ -69,7 +70,7 @@ def send(request):
         new_message = Message.objects.create(text=text, username=username)
         new_message.save()
         print(text)
-        x = chate(text)
+        x = ask(text)
         
         new_message = Message.objects.create(text=x, username="bot")
         new_message.save()
